@@ -1,7 +1,17 @@
 language: java
-sudo: false # faster builds
-
-script: "mvn cobertura:cobertura"
-
+sudo: false
+script: mvn cobertura:cobertura
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+before_deploy:
+  - mvn help:evaluate -N -Dexpression=project.version|grep -v '\['
+  - export project_version=$(mvn help:evaluate -N -Dexpression=project.version|grep -v '\[')
+deploy:
+  provider: releases
+  api_key:
+    secure: rlyChhrspq+oSbZiX9QxHNQwZBjSazOInmjz4xKs7yTPhJzAziPKZ8qICfqfn7t69aSi5VfXKDn91N+kXsBGE+Vvsnl3FBm8PjrhFUV8D+ExeVdgH/AYq0f45VjqKkiJn3lJYwTyUjKUB7fHqBRs2s0u1/79JgZrnAmacWyZniTFmjCI0ebCbcbe1IohAHRJb2nwE5yT54XEEiecWq8xPD8tIveYqOGS0gYc53D7WCaXvwaB/fYof59JkpKJLBSuqPLASYRI+GokXIk/z2icJ0KIo4CM0Y3VAYLMp+KY1EIC9q+9wTXPv1GNNYR6XcsZNglvSrim1qmD2U7AaW6OM8XdmW7r7b6ZHggA9wfZmfEh0MFgQ4kSPyforXRunnUN6gamTk2NSiNTHqMcOxqAzGvFeOlKh7QSKdKO2gfLXgqkCRhel3wDCUrZOX8dBX/olreJ+LPfW2rZ1gZlF5v2no9dGggjFAao7JbSCix4Es3EuWTyJW4mGKGCJUZzfCq02WADHibCUeIvlaxXmt6J3QCatdlXd1ph0ITwH5WPy9VqkrpuGIYycITZWQ1tR9rsrc0H4irmRi+3jcZbl+bcV2LF7HTHd/gTR5SiKs7/47g1os7ONX/6EIlWL//lHnrAdEZ8Mk/3gqfgA1LPG9TyaQr89rKl3kmTb+pSLRE6nmk=
+  file: target/context-spec-$project_version.jar
+  skip_cleanup: true
+  on:
+    repo: kasiprasad/context-spec
+  name: $project_version
