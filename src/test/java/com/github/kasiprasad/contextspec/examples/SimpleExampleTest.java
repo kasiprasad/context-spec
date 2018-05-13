@@ -1,6 +1,6 @@
-package com.kasiprasad.contextspec.examples;
+package com.github.kasiprasad.contextspec.examples;
 
-import com.kasiprasad.contextspec.ContextSpecification;
+import com.github.kasiprasad.contextspec.ContextSpecification;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;

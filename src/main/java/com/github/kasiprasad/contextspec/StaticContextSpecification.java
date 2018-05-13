@@ -1,4 +1,4 @@
-package com.kasiprasad.contextspec;
+package com.github.kasiprasad.contextspec;
 
 import org.junit.Before;
 

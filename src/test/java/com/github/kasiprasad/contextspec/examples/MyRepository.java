@@ -1,4 +1,4 @@
-package com.kasiprasad.contextspec.examples;
+package com.github.kasiprasad.contextspec.examples;
 
 /**
  * An example of a class which has some behavior to test
