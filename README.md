@@ -1,4 +1,4 @@
-#Context Spec
+# Context Spec - Context Specification style tests for Java
 
 A simple context specification framework for Java leveraging JUnit.
 
