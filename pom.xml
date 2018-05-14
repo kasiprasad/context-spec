@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.kasiprasad.contextspec</groupId>
     <artifactId>contextspec</artifactId>
-    <version>0.0.0-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>Context Spec</name>
     <description>Context Spec is a simple Context Specification based Testing framework in Java over JUnit</description>
 
@@ -61,6 +60,23 @@
                     <check />
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>1.0-m5.1</version>
+                <!--<configuration>-->
+                    <!--<flowInitContext>-->
+                        <!--<masterBranchName>master</masterBranchName>-->
+                        <!--<developBranchName>develop</developBranchName>-->
+                        <!--<featureBranchPrefix>feature-</featureBranchPrefix>-->
+                        <!--<releaseBranchPrefix>release-</releaseBranchPrefix>-->
+                        <!--<hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>-->
+                        <!--<versionTagPrefix>-</versionTagPrefix>-->
+                    <!--</flowInitContext>-->
+                <!--</configuration>-->
+            </plugin>
+
+
         </plugins>
     </build>
 
