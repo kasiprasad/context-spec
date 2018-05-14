@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>Context Spec</name>
     <description>Context Spec is a simple Context Specification based Testing framework in Java over JUnit</description>
+    <url>https://github.com/kasiprasad/context-spec</url>
 
     <properties>
         <version.maven-compiler-plugin>3.7.0</version.maven-compiler-plugin>

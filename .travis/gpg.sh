@@ -39,10 +39,10 @@ shred gen-key-script
 # publish the gpg key
 # (use keyserver.ubuntu.com as travis request keys from this server,
 #  we avoid synchronization issues, while releasing)
-gpg --keyserver keyserver.ubuntu.com --send-keys ${GPG_KEYNAME}
+gpg --keyserver pool.sks-keyservers.net --send-keys ${GPG_KEYNAME}
 
 # wait for the key beeing accessible
 while(true); do
   date
-  gpg --keyserver keyserver.ubuntu.com  --recv-keys ${GPG_KEYNAME} && break || sleep 30
+  gpg --keyserver pool.sks-keyservers.net  --recv-keys ${GPG_KEYNAME} && break || sleep 30
 done
