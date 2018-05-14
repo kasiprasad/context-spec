@@ -4,7 +4,7 @@
 
     <groupId>com.github.kasiprasad.contextspec</groupId>
     <artifactId>contextspec</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>Context Spec</name>
     <description>Context Spec is a simple Context Specification based Testing framework in Java over JUnit</description>
 
