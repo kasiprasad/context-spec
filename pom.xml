@@ -115,19 +115,10 @@
 
 
     <profiles>
-        <!-- Activate using the release property: mvn clean install -Prelease -->
         <profile>
             <id>release</id>
-            <activation>
-                <property>
-                    <name>release</name>
-                </property>
-            </activation>
-
-
             <build>
                 <plugins>
-
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -179,9 +170,7 @@
                             </execution>
                         </executions>
                     </plugin>
-
                 </plugins>
-
             </build>
         </profile>
     </profiles>
